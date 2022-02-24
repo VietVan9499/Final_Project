@@ -15,3 +15,5 @@ All of the information presented above was obtained entirely through the use of 
 ![image](https://user-images.githubusercontent.com/74348080/155460411-108acd1d-9088-473e-b0ea-a08c466e32c3.png)
 ---------Mobile App
 ![image](https://user-images.githubusercontent.com/74348080/155460457-4b256b15-28d0-4a8a-a5d3-68b1cc9481b2.png)
+------ Face Recognition
+![image](https://user-images.githubusercontent.com/74348080/155462776-048e420b-7cd8-475f-88bd-73b330645f20.png)
