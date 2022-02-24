@@ -1,0 +1,3252 @@
+animated_background:
+  default_url: 'https://cdn.flixel.com/flixel/v26zyfd6yf0r33s46vpe.hd.mp4'
+  entity: sensor.time_formatted
+  state_url:
+    '10':
+      - 'https://cdn.flixel.com/flixel/hrkw2m8eofib9sk7t1v2.hd.mp4'
+      - /local/video/Trua/videoplayback_Trim.mp4
+      - 'https://cdn.flixel.com/flixel/9m11gd43m6qn3y93ntzp.hd.mp4'
+      - /local/video/vietnam.mp4
+      - 'https://cdn.flixel.com/flixel/qed6wvf2igukiioykg3r.hd.mp4'
+    '11':
+      - /local/video/vietnam.mp4
+    '12':
+      - /local/video/vietnam.mp4
+    '13':
+      - 'https://cdn.flixel.com/flixel/3rd72eezaj6d23ahlo7y.hd.mp4'
+      - /local/video/vietnam.mp4
+      - 'https://cdn.flixel.com/flixel/hrkw2m8eofib9sk7t1v2.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/zjqsoc6ecqhntpl5vacs.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/guwb10mfddctfvwioaex.hd.mp4'
+    '14':
+      - /local/video/Chieu/hoian_Trim.mp4
+      - 'https://cdn.flixel.com/flixel/e95h5cqyvhnrk4ytqt4q.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/f0w23bd0enxur5ff0bxz.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/rrgta099ulami3zb9fd2.hd.mp4'
+    '15':
+      - /local/video/Sang/8h.mp4
+      - /local/video/Chieu/hoian_Trim.mp4
+      - /local/video/Trua/videoplayback_Trim.mp4
+      - /local/video/Trua/12h.mp4
+      - 'https://cdn.flixel.com/flixel/e95h5cqyvhnrk4ytqt4q.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/f0w23bd0enxur5ff0bxz.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/rrgta099ulami3zb9fd2.hd.mp4'
+    '16':
+      - /local/video/Trua/12h.mp4
+      - 'https://cdn.flixel.com/flixel/9m11gd43m6qn3y93ntzp.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/l2bjw34wnusyf5q2qq3p.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/13e0s6coh6ayapvdyqnv.hd.mp4'
+    '17':
+      - 'https://cdn.flixel.com/flixel/vwqzlk4turo2449be9uf.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/e95h5cqyvhnrk4ytqt4q.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/f0w23bd0enxur5ff0bxz.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/rrgta099ulami3zb9fd2.hd.mp4'
+    '18':
+      - /local/video/Chieu/6hChieu.mp4
+      - /local/video/Chieu/6hPm.mp4
+    '19':
+      - /local/video/Toi/Ha Noi_Trim.mp4
+    '20':
+      - /local/video/Toi/DaNang8h.mp4
+      - 'https://cdn.flixel.com/flixel/rosz2gi676xhkiw1ut6i.hd.mp4'
+    '21':
+      - /local/video/Toi/CaRong9h.mp4
+      - 'https://cdn.flixel.com/flixel/rosz2gi676xhkiw1ut6i.hd.mp4'
+    '22':
+      - /local/video/Khuya/CauRongKhuya.mp4
+    '23':
+      - /local/video/Toi/DaNang8h.mp4
+      - /local/video/Khuya/CauRongKhuya.mp4
+    '05':
+      - /local/video/Sang/5hsang.mp4
+    '06':
+      - /local/video/Sang/6h.mp4
+    '07':
+      - /local/video/Sang/7h.mp4
+    08:
+      - /local/video/Sang/9h.mp4
+    09:
+      - /local/video/Sang/9h.mp4
+      - 'https://cdn.flixel.com/flixel/13e0s6coh6ayapvdyqnv.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/3rd72eezaj6d23ahlo7y.hd.mp4'
+      - 'https://cdn.flixel.com/flixel/9m11gd43m6qn3y93ntzp.hd.mp4'
+    '00':
+      - /local/video/Khuya/CauQuay12h.mp4
+views:
+  - title: Security
+    path: security
+    panel: true
+    icon: 'mdi:security'
+    visible:
+      - user: 7865da585727423c903ec96aa75f9fed
+      - user: 3465128820b149a780b3619a90957259
+    badges: []
+    cards:
+      - type: alarm-panel
+        entity: alarm_control_panel.home_alarm
+        states:
+          - arm_away
+        name: Nhập mật khẩu
+        theme: ios-dark-mode
+        card_mod:
+          style: |
+            ha-card { 
+              --paper-input-container-shared-input-style_-_font-size: 2.5rem;
+              --keypad-font-size: 2.5rem;
+              --mdc-typography-button-font-size: 1.5rem;
+              --mdc-button-outline-color: rgba(0, 0, 0, 0);
+              --paper-font-subhead_-_font-size: 1.5rem;
+              --mdc-shape-small: 100%;
+            }
+            #keypad {
+              width: 50%;
+              max-width: 500px !important;
+            }
+            #keypad mwc-button {
+              border-radius: 5px;
+            }
+            mwc-button.numberkey {
+              border-color: rgba(100,100,100,.1);
+              border-width: 2px;
+              border-style: solid;
+            }
+            #keypad mwc-button:hover {
+              background: rgba(100,100,100,.2);
+            }
+            #keypad mwc-button {
+              padding: 30px !important;
+              margin: 4px;
+              width: 30%;
+              box-sizing: border-box;
+              height: 100px;
+            }
+            paper-input {
+                max-width: 300px !important;
+            }
+  - title: Button Home and Camera
+    path: button-home
+    icon: 'mdi:gesture-tap-button'
+    theme: ios-dark-mode
+    panel: false
+    visible:
+      - user: a6aaae1fa29e46c1b10bc178556c4939
+      - user: 7865da585727423c903ec96aa75f9fed
+      - user: 4ccaec5acfa540a9a1eb7427ed3579c3
+      - user: f8aea87c0e0f4a13a9558a0d67334f7a
+    badges: []
+    cards:
+      - cards:
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - type: 'custom:weather-card'
+                entity: weather.nha
+                number_of_forecasts: '5'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Toàn Nhà
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - type: 'custom:button-card'
+                name: Nhà
+                icon: 'mdi:home-flood'
+                state:
+                  - value: 'off'
+                    color: 'rgb(135, 117, 244)'
+                    icon: 'mdi:home-export-outline'
+                    name: Leave
+                tap_action:
+                  action: toggle
+                entity: light.off_all
+              - type: 'custom:button-card'
+                name: Phòng Khách
+                icon: 'mdi:human-capacity-decrease'
+                color: red
+                state:
+                  - value: 'off'
+                    name: Leave
+                tap_action:
+                  action: toggle
+                entity: light.off_all_living
+              - type: 'custom:button-card'
+                name: Phòng Ngủ
+                icon: 'mdi:human-male-female'
+                color: red
+                state:
+                  - value: 'off'
+                    name: Leave
+                tap_action:
+                  action: toggle
+                entity: light.off_all_bedroom
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.off_all_phongtho
+                icon: 'mdi:church'
+                name: Phòng Thờ
+                state:
+                  - icon: 'mdi:church'
+                    styles:
+                      card:
+                        - height: 95px
+                      icon:
+                        - width: 45%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-all
+                    value: 'off'
+                  - color: 'rgb(234, 179, 0)'
+                    icon: 'mdi:church'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 95px
+                      icon:
+                        - width: 50%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.off_all_toilet
+                icon: 'mdi:shower-head'
+                name: Phòng Tắm
+                state:
+                  - icon: 'mdi:shower-head'
+                    styles:
+                      card:
+                        - height: 95px
+                      icon:
+                        - width: 45%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-all
+                    value: 'off'
+                  - color: 'rgb(234, 179, 0)'
+                    icon: 'mdi:shower-head'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 95px
+                      icon:
+                        - width: 50%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.off_all_kitchen
+                icon: 'mdi:food-variant'
+                name: Phòng Bếp
+                state:
+                  - icon: 'mdi:food-variant-off'
+                    styles:
+                      card:
+                        - height: 95px
+                      icon:
+                        - width: 45%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-all
+                    value: 'off'
+                  - color: 'rgb(234, 179, 0)'
+                    icon: 'mdi:food-variant'
+                    operator: default
+                    styles:
+                      card:
+                        - height: 95px
+                      icon:
+                        - width: 50%
+                      name:
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - type: 'custom:button-card'
+                entity: alarm_control_panel.home_alarm
+                entity_picture: /local/image/icon/lock.png
+                show_state: true
+                icon: 'mdi:server-security'
+                name: ALARM STATUS
+                show_label: true
+                styles:
+                  card:
+                    - background-color: transparent
+                    - padding: 2%
+                    - box-shadow: 'inset 0 0 5px rgba(0,0,0,0.6)'
+                  grid:
+                    - grid-template-areas: '"i n l" "i s btn"'
+                    - grid-template-columns: auto auto auto
+                    - grid-template-rows: 1fr 1fr
+                  icon:
+                    - width: 50px
+                  name:
+                    - justify-self: start
+                    - font-weight: 300
+                    - font-size: 20px
+                    - text-align: center
+                  state:
+                    - font-size: 14px
+                    - justify-self: start
+                    - font-weight: 450
+                    - text-transform: uppercase
+                    - align-self: middle
+                    - text-align: center
+                  label:
+                    - font-size: 16px
+                    - justify-self: center
+                    - font-weight: 300
+                    - text-align: center
+                    - padding-bottom: 5px
+                  custom_fields:
+                    btn:
+                      - background-color: transparent
+                custom_fields: null
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+          - content: |
+              # Who's Home
+            style:
+              .: |
+                ha-card {
+                  background-color: transparent !important;
+                  box-shadow: none !important;
+                }
+              ha-markdown:
+                $: |
+                  h1 {
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: '-0.01em';
+                  }
+            type: markdown
+          - cards:
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+              - entity: light.light_living
+                entity_picture: /local/image/icon/ava/viet.png
+                show_entity_picture: true
+                name: Văn Việt
+                state:
+                  - entity_picture: /local/image/icon/ava/viet.png
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    entity_picture: /local/image/icon/ava/viet.png
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - padding-top: 10px
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: device_tracker.iphone_2
+                entity_picture: /local/image/icon/ava/van.png
+                show_entity_picture: true
+                name: Lê Văn
+                state:
+                  - entity_picture: /local/image/icon/ava/van.png
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    entity_picture: /local/image/icon/ava/van.png
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - entity: light.light_living
+                entity_picture: /local/image/icon/ava/yen.png
+                show_entity_picture: true
+                name: Mẹ
+                state:
+                  - entity_picture: /local/image/icon/ava/yen.png
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 5px 15px 5px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                    value: 'off'
+                  - color: white
+                    entity_picture: /local/image/icon/ava/yen.png
+                    operator: default
+                    styles:
+                      card:
+                        - height: 100px
+                      entity_picture:
+                        - width: 45%
+                        - opacity: 0.5
+                      name:
+                        - padding: 5px 15px 15px 15px
+                        - font-size: 15px
+                        - text-overflow: unset
+                        - white-space: unset
+                        - word-break: break-word
+                type: 'custom:button-card'
+              - color_type: blank-card
+                icon: 'mdi:led-strip-variant'
+                name: Floor
+                styles:
+                  card:
+                    - width: 50px
+                type: 'custom:button-card'
+            type: horizontal-stack
+        type: vertical-stack
+      - cards:
+          - cards:
+              - content: |
+                  # Camera's
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                        font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - type: vertical-stack
+                cards:
+                  - type: horizontal-stack
+                    cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                      - type: 'custom:webrtc-camera'
+                        url: 'rtsp://admin:Vietnguyen123_@192.168.0.4:554/onvif1'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                  - type: horizontal-stack
+                    cards:
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+                      - type: 'custom:webrtc-camera'
+                        url: 'rtsp://admin:Vietnguyen123_@192.168.0.13:554/onvif1'
+                      - color_type: blank-card
+                        icon: 'mdi:led-strip-variant'
+                        name: Floor
+                        styles:
+                          card:
+                            - width: 50px
+                        type: 'custom:button-card'
+            type: vertical-stack
+          - cards:
+              - content: |
+                  # Phòng Thờ
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                        font-weight: bold;
+                        text-align: center;
+                         padding-top: 15px;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.off_all_phongtho
+                    icon: 'mdi:church'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:church'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:church'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.den_tho
+                    icon: 'mdi:lightbulb'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:lightbulb'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Yellow
+                        icon: 'mdi:lightbulb-on'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.den_tho_3v
+                    icon: 'mdi:led-off'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:led-off'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:led-on'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.tung_kinh
+                    icon: 'mdi:music-circle-outline'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:music-note-off'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:music-circle-outline'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: binary_sensor.huong
+                    icon: 'mdi:fire'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:fire'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:fire'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+        type: vertical-stack
+      - cards:
+          - cards:
+              - content: |
+                  # Phòng Khách
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                        font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.off_all_living
+                    icon: 'mdi:human-capacity-decrease'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:human-capacity-decrease'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: red
+                        icon: 'mdi:human-capacity-decrease'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.light_living
+                    icon: 'mdi:lightbulb-on-outline'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:lightbulb-outline'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Yellow
+                        icon: 'mdi:lightbulb-on-outline'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: fan.fan_livng
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:fan'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: green
+                        icon: 'mdi:fan'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                            - animation:
+                                - rotating 1.5s linear infinite
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.light_san
+                    icon: 'mdi:outdoor-lamp'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:outdoor-lamp'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:outdoor-lamp'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: binary_sensor.open_door
+                    icon: 'mdi:door-closed'
+                    name: Hallway
+                    show_name: false
+                    state:
+                      - icon: 'mdi:door-closed'
+                        styles:
+                          card:
+                            - height: 80px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: red
+                        icon: 'mdi:door-open'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 80px
+                            - color: yellow
+                            - opacity: 0.5
+                            - animation: blink 2s ease infinite
+                          icon:
+                            - width: 45%
+                            - color: yellow
+                            - padding-top: 10px
+                          name:
+                            - padding: 10px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: switch.servo_door
+                    icon: 'mdi:door-closed'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:door-open'
+                        styles:
+                          card:
+                            - height: 80px
+                          icon:
+                            - width: 45%
+                            - opacity: 0.5
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: red
+                        icon: 'mdi:door-closed'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 80px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.reed_book
+                    icon: 'mdi:book-open-page-variant'
+                    name: ReadBook
+                    state:
+                      - icon: 'mdi:bookshelf'
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Yellow
+                        icon: 'mdi:book-open-page-variant'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.normal
+                    icon: 'mdi:led-strip-variant'
+                    name: Chill
+                    state:
+                      - icon: 'mdi:led-strip-variant'
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Blue
+                        icon: 'mdi:led-strip-variant'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.kara
+                    icon: 'mdi:account-music-outline'
+                    name: Kara
+                    state:
+                      - icon: 'mdi:account-music-outline'
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Lime
+                        icon: 'mdi:account-music-outline'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.sleep
+                    icon: 'mdi:seat-individual-suite'
+                    name: Sleep
+                    state:
+                      - icon: 'mdi:bed-empty'
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Magenta
+                        icon: 'mdi:seat-individual-suite'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.red
+                    icon: 'mdi:clover'
+                    name: Love
+                    state:
+                      - icon: 'mdi:clover'
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Red
+                        icon: 'mdi:clover'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 50%
+                            - animation:
+                                - rotating 6s linear infinite
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.off_rgb
+                    icon: 'mdi:flash-off'
+                    name: RGB
+                    state:
+                      - icon: 'mdi:flash-off'
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: yellow
+                        icon: 'mdi:flash'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 60px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - type: 'custom:swipe-card'
+                    card_width: 180px
+                    start_card: 3
+                    parameters:
+                      effect: coverflow
+                      grabCursor: true
+                      centeredSlides: true
+                      slidesPerView: auto
+                      coverflowEffect:
+                        rotate: 50
+                        stretch: 0
+                        depth: 100
+                        modifier: 1
+                        slideShadows: true
+                      pagination:
+                        type: bullets
+                    cards:
+                      - type: 'custom:mini-graph-card'
+                        entities:
+                          - sensor.temprature
+                        line_color: blue
+                        line_width: 8
+                        font_size: 75
+                        name: Temp
+                      - type: 'custom:mini-graph-card'
+                        entities:
+                          - sensor.humunity
+                        line_color: '#e74c3c'
+                        line_width: 8
+                        font_size: 75
+                        name: Hum
+                      - type: 'custom:mini-graph-card'
+                        entities:
+                          - sensor.pm
+                        line_color: '#e74c3c'
+                        line_width: 8
+                        font_size: 75
+                        name: PM 2.5
+                      - type: 'custom:mini-graph-card'
+                        entities:
+                          - sensor.aqi
+                        line_color: '#e74c3c'
+                        line_width: 8
+                        font_size: 75
+                        name: AQI
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+          - cards:
+              - content: |
+                  # Phòng Ngủ
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                        font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.off_all_bedroom
+                    icon: 'mdi:human-male-female'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:human-male-female'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: red
+                        icon: 'mdi:human-male-female'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.light_bedroom
+                    icon: 'mdi:lightbulb'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:lightbulb'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Yellow
+                        icon: 'mdi:lightbulb-on'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: fan.fan_bedroom
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:fan'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: green
+                        icon: 'mdi:fan'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                            - animation:
+                                - rotating 1.5s linear infinite
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.light_bedroom_sleep
+                    icon: 'mdi:bed-empty'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:bed-empty'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:bed'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: switch.window_curtains_open
+                    icon: 'mdi:blinds-open'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:blinds-open'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:blinds'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - type: 'custom:swipe-card'
+                    card_width: 200px
+                    start_card: 3
+                    parameters:
+                      effect: coverflow
+                      grabCursor: true
+                      centeredSlides: true
+                      slidesPerView: auto
+                      coverflowEffect:
+                        rotate: 50
+                        stretch: 0
+                        depth: 100
+                        modifier: 1
+                        slideShadows: true
+                      pagination:
+                        type: bullets
+                    cards:
+                      - type: 'custom:tempometer-gauge-card'
+                        entity: sensor.temprature_bedroom
+                        min: 0
+                        max: 50
+                        title: Temprature
+                        card_style: custom
+                        icon1: 'mdi:thermometer-low'
+                        icon2: 'mdi:thermometer'
+                        icon3: 'mdi:thermometer-alert'
+                        severity:
+                          green: 0
+                          yellow: 30
+                          red: 40
+                          max: 50
+                      - type: 'custom:tempometer-gauge-card'
+                        entity: sensor.humunity_bedroom
+                        min: 0
+                        max: 100
+                        title: Humunity
+                        card_style: custom
+                        icon1: 'mdi:water-check-outline'
+                        icon2: 'mdi:water-percent'
+                        icon3: 'mdi:water-percent-alert'
+                        severity:
+                          green: 0
+                          yellow: 80
+                          red: 90
+                          max: 100
+                      - type: 'custom:tempometer-gauge-card'
+                        entity: sensor.pm_bedroom
+                        min: 0
+                        max: 1500
+                        title: CO2
+                        card_style: custom
+                        icon1: 'mdi:baby-face-outline'
+                        icon2: 'mdi:emoticon-sick-outline'
+                        icon3: 'mdi:face-mask'
+                        severity:
+                          green: 0
+                          yellow: 1000
+                          red: 1500
+                          max: 2100
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+        type: vertical-stack
+      - cards:
+          - cards:
+              - content: |
+                  # Phòng Bếp
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                        font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.off_all_kitchen
+                    icon: 'mdi:food-variant'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:food-variant-off'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:food-variant'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.light_kitchen
+                    icon: 'mdi:lightbulb'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:lightbulb'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Yellow
+                        icon: 'mdi:lightbulb-on'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: fan.fan_kitchen
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:fan'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: green
+                        icon: 'mdi:fan'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                            - animation:
+                                - rotating 1.5s linear infinite
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.bep
+                    icon: 'mdi:fireplace-off'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:fireplace-off'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:fireplace'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - type: 'custom:swipe-card'
+                    card_width: 350px
+                    start_card: 3
+                    parameters:
+                      effect: coverflow
+                      grabCursor: true
+                      centeredSlides: true
+                      slidesPerView: auto
+                      coverflowEffect:
+                        rotate: 50
+                        stretch: 0
+                        depth: 100
+                        modifier: 1
+                        slideShadows: true
+                      pagination:
+                        type: bullets
+                    cards:
+                      - type: 'custom:tempometer-gauge-card'
+                        entity: sensor.temp_kitchen_ambient
+                        min: 0
+                        max: 50
+                        title: Temprature
+                        card_style: custom
+                        icon1: 'mdi:thermometer-low'
+                        icon2: 'mdi:thermometer'
+                        icon3: 'mdi:thermometer-alert'
+                        severity:
+                          green: 0
+                          yellow: 30
+                          red: 40
+                          max: 50
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: binary_sensor.food
+                    entity_picture: /local/image/Bep/meat.png
+                    show_entity_picture: true
+                    name: Văn Việt
+                    show_name: false
+                    state:
+                      - entity_picture: /local/image/Bep/meat.png
+                        styles:
+                          card:
+                            - height: 100px
+                          entity_picture:
+                            - width: 45%
+                            - opacity: 0.4
+                            - padding-top: 10px
+                          name:
+                            - padding: 5px 15px 15px 15px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        entity_picture: /local/image/Bep/meat.png
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          entity_picture:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 5px 15px 15px 15px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: binary_sensor.rau
+                    entity_picture: /local/image/Bep/fruits.png
+                    show_entity_picture: true
+                    name: Văn Việt
+                    show_name: false
+                    state:
+                      - entity_picture: /local/image/Bep/fruits.png
+                        styles:
+                          card:
+                            - height: 100px
+                          entity_picture:
+                            - width: 45%
+                            - opacity: 0.4
+                            - padding-top: 10px
+                          name:
+                            - padding: 5px 15px 15px 15px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        entity_picture: /local/image/Bep/fruits.png
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          entity_picture:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 5px 15px 15px 15px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: binary_sensor.sua
+                    entity_picture: /local/image/Bep/milk.png
+                    show_entity_picture: true
+                    name: Văn Việt
+                    show_name: false
+                    state:
+                      - entity_picture: /local/image/Bep/milk.png
+                        styles:
+                          card:
+                            - height: 100px
+                          entity_picture:
+                            - width: 45%
+                            - opacity: 0.4
+                            - padding-top: 10px
+                          name:
+                            - padding: 5px 15px 15px 15px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                        value: 'off'
+                      - color: white
+                        entity_picture: /local/image/Bep/milk.png
+                        operator: default
+                        styles:
+                          card:
+                            - height: 100px
+                          entity_picture:
+                            - width: 45%
+                            - padding-top: 10px
+                          name:
+                            - padding: 5px 15px 15px 15px
+                            - font-size: 15px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+          - cards:
+              - content: |
+                  # Phòng Tắm
+                style:
+                  .: |
+                    ha-card {
+                      background-color: transparent !important;
+                      box-shadow: none !important;
+                    }
+                  ha-markdown:
+                    $: |
+                      h1 {
+                        font-size: 25px;
+                        font-weight: bold;
+                        text-align: center;
+                        letter-spacing: '-0.01em';
+                      }
+                type: markdown
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - entity: light.off_all_toilet
+                    icon: 'mdi:shower-head'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:shower-head'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:shower-head'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.tolet
+                    icon: 'mdi:lightbulb'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:lightbulb'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: Yellow
+                        icon: 'mdi:lightbulb-on'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - entity: light.may_nong_lanh
+                    icon: 'mdi:water-percent'
+                    name: XXXX
+                    show_name: false
+                    state:
+                      - icon: 'mdi:water-percent'
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 45%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-all
+                        value: 'off'
+                      - color: 'rgb(234, 179, 0)'
+                        icon: 'mdi:water-percent'
+                        operator: default
+                        styles:
+                          card:
+                            - height: 95px
+                          icon:
+                            - width: 50%
+                          name:
+                            - font-size: 10px
+                            - text-overflow: unset
+                            - white-space: unset
+                            - word-break: break-word
+                    type: 'custom:button-card'
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+              - cards:
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                  - type: entities
+                    entities:
+                      - entity: input_number.light_timer_minutes
+                        name: Hẹn thời gian
+                        icon: 'mdi:timer'
+                    state_color: true
+                  - color_type: blank-card
+                    icon: 'mdi:led-strip-variant'
+                    name: Floor
+                    styles:
+                      card:
+                        - width: 50px
+                    type: 'custom:button-card'
+                type: horizontal-stack
+            type: vertical-stack
+        type: vertical-stack
+  - title: '3D Floor Plan '
+    path: ''
+    panel: true
+    icon: 'mdi:home-flood'
+    theme: ios-dark-mode
+    visible:
+      - user: e5964d97733947ba840d1ee97fd847d9
+      - user: 7865da585727423c903ec96aa75f9fed
+    badges: []
+    cards:
+      - type: picture-elements
+        image: local/3D/dark.png
+        elements:
+          - type: image
+            entity: light.light_living
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/LivingHome/LivingMoRem.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.reed_book
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/LivingHome/book.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.normal
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/LivingHome/chill.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.sleep
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/sleep.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.red
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/LivingHome/Red.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.kara
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/LivingHome/kara.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.light_bedroom
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/PhongNgu/PhongNgu.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.light_bedroom_sleep
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/PhongNgu/denNgu.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.light_kitchen
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Bep/kitchen.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.tolet
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/VeSinh/tolet.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.den_tho
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/phongTho/tho.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.den_tho_3v
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/phongTho/cung.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: light.light_san
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/LivingHome/NgoaiSan.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: switch.servo_door
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/tran.png
+              'off': /local/3D/closeDoor.png
+          - type: image
+            entity: switch.window_curtains_open
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Rem/closeRemBedRoom.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: switch.window_curtains_open
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Rem/closeRemBep.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: switch.window_curtains_open
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Rem/closeRemTho.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: switch.window_curtains_open
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Rem/closeRemLiving1.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: switch.window_curtains_open
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Rem/closeRemLiving2.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: switch.window_curtains_open
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Rem/closeRemLiving3.png
+              'off': /local/3D/tran.png
+          - type: image
+            entity: switch.window_curtains_open
+            style:
+              top: 50%
+              left: 50%
+              width: 100%
+            state_image:
+              'on': /local/3D/Rem/closeRemLiving4.png
+              'off': /local/3D/tran.png
+          - type: 'custom:button-card'
+            show_icon: true
+            entity_picture: /local/image/icon/lock.png
+            show_entity_picture: true
+            entity: alarm_control_panel.home_alarm
+            name: Zu Hause
+            show_name: false
+            show_label: false
+            style:
+              top: 26%
+              left: 15%
+            styles:
+              custom_fields:
+                graph:
+                  - position: absolute
+                  - left: 0px
+                  - top: 115px
+                topbottomleft:
+                  - position: absolute
+                  - left: 15px
+                  - top: 55px
+                centerleft:
+                  - position: absolute
+                  - left: 30px
+                  - top: 80px
+                topleft:
+                  - position: absolute
+                  - left: 8%
+                  - top: 20px
+                topright:
+                  - position: absolute
+                  - left: 240px
+                  - top: 27px
+                centeright:
+                  - position: absolute
+                  - left: 240px
+                  - top: 80px
+                halfright:
+                  - position: absolute
+                  - left: 175px
+                  - top: 25px
+                halfleft:
+                  - position: absolute
+                  - left: 100px
+                  - top: 25px
+              grid:
+                - grid-template-areas: '"i" "n" "l"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
+              card:
+                - border-radius: 10px
+                - box-shadow: '5px 5px 20px rgba(0, 0, 0, 0.2)'
+                - min-height: 220px
+                - min-height: 220px
+                - min-width: 300px
+              icon:
+                - width: 85px
+              img_cell:
+                - padding-top: 35px
+              name:
+                - color: var(--secondary-text-color)
+                - justify-self: center
+              label:
+                - font-size: 12px
+                - justify-self: center
+                - padding-bottom: 70px
+            state:
+              - value: armed_home
+                entity_picture: /local/image/icon/alarm/security.png
+              - value: disarmed
+                entity_picture: /local/image/icon/alarm/unlocked.png
+            custom_fields:
+              graph:
+                card:
+                  type: 'custom:mini-graph-card'
+                  card_mod:
+                    style: |
+                      ha-card {
+                      --ha-card-background: transparent; 
+                      color: var(--secondary-text-color);
+                      width: 300px;
+                      border-radius: 0px;
+                      }
+                  entities:
+                    - entity: sensor.nha_realfeel_temperature
+                  show:
+                    icon: false
+                    name: false
+                    points: true
+                  font_size: 50
+                  line_color: blue
+              topleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:home-export-outline'
+                  styles:
+                    icon:
+                      - width: 45px
+                  state:
+                    - value: 'on'
+                      color: yellow
+                      icon: 'mdi:home-flood'
+                  tap_action:
+                    action: toggle
+              centerleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_living
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:human-capacity-decrease'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: red
+                      icon: 'mdi:human-capacity-decrease'
+                  tap_action:
+                    action: toggle
+              topright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_toilet
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:shower-head'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:shower-head'
+                  tap_action:
+                    action: toggle
+              centeright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_bedroom
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:human-male-female'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: red
+                      icon: 'mdi:human-male-female'
+                  tap_action:
+                    action: toggle
+              halfright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_kitchen
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:food-variant-off'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:food-variant'
+                  tap_action:
+                    action: toggle
+              halfleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_phongtho
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:church'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:church'
+                  tap_action:
+                    action: toggle
+          - type: 'custom:button-card'
+            style:
+              top: 50%
+              left: 7%
+            styles:
+              custom_fields:
+                graph:
+                  - position: absolute
+                  - left: 0px
+                  - top: 150px
+                topleft:
+                  - position: absolute
+                  - left: 8%
+                  - top: 7px
+                topright:
+                  - position: absolute
+                  - right: 7px
+                  - top: 10px
+                centertop:
+                  - position: absolute
+                  - left: 66px
+                  - top: 12px
+                door:
+                  - position: absolute
+                  - left: 85px
+                  - top: 53px
+                san:
+                  - position: absolute
+                  - left: 40px
+                  - top: 50px
+                'off':
+                  - position: absolute
+                  - left: 13px
+                  - top: 105px
+                book:
+                  - position: absolute
+                  - left: 62px
+                  - top: 90px
+                chill:
+                  - position: absolute
+                  - right: 7px
+                  - top: 90px
+                sleep:
+                  - position: absolute
+                  - left: 62px
+                  - top: 125px
+                love:
+                  - position: absolute
+                  - right: 10px
+                  - top: 130px
+                kara:
+                  - position: absolute
+                  - right: 28px
+                  - top: 155px
+              grid:
+                - grid-template-areas: '"i" "n" "l"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
+              card:
+                - border-radius: 10px
+                - box-shadow: '5px 5px 20px rgba(0, 0, 0, 0.2)'
+                - min-height: 240px
+                - min-width: 150px
+              name:
+                - color: var(--secondary-text-color)
+                - justify-self: center
+              label:
+                - font-size: 12px
+                - justify-self: center
+                - padding-bottom: 70px
+            custom_fields:
+              graph:
+                card:
+                  type: 'custom:mini-graph-card'
+                  card_mod:
+                    style: |
+                      ha-card {
+                      --ha-card-background: transparent; 
+                      color: var(--secondary-text-color);
+                      width: 150px;
+                      border-radius: 0px;
+                      }
+                  entities:
+                    - entity: sensor.temprature
+                  show:
+                    icon: false
+                    name: false
+                    points: true
+                  font_size: 45
+                  line_color: blue
+              topleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_living
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:human-capacity-decrease'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: red
+                      icon: 'mdi:human-capacity-decrease'
+                  tap_action:
+                    action: toggle
+              centertop:
+                card:
+                  type: 'custom:button-card'
+                  entity: fan.fan_livng
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:fan'
+                  styles:
+                    icon:
+                      - width: 25px
+                  state:
+                    - value: 'on'
+                      color: green
+                      styles:
+                        icon:
+                          - animation:
+                              - rotating 3s linear infinite
+                  tap_action:
+                    action: toggle
+              topright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.light_living
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:lightbulb-outline'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:lightbulb-on-outline'
+                  tap_action:
+                    action: toggle
+              door:
+                card:
+                  type: 'custom:button-card'
+                  entity: switch.servo_door
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:door-closed'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:door-open'
+                  tap_action:
+                    action: toggle
+              san:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.light_san
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:outdoor-lamp'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:outdoor-lamp'
+                  tap_action:
+                    action: toggle
+              'off':
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_rgb
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:flash-off'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:flash'
+                  tap_action:
+                    action: toggle
+              book:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.reed_book
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:bookshelf'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:book-open-page-variant'
+                  tap_action:
+                    action: toggle
+              chill:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.normal
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:led-strip-variant'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Blue
+                      icon: 'mdi:led-strip-variant'
+                  tap_action:
+                    action: toggle
+              sleep:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.sleep
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:bed-empty'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Magenta
+                      icon: 'mdi:seat-individual-suite'
+                  tap_action:
+                    action: toggle
+              love:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.red
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:clover'
+                  styles:
+                    icon:
+                      - width: 25px
+                  state:
+                    - value: 'on'
+                      color: Red
+                      styles:
+                        icon:
+                          - animation:
+                              - rotating 3s linear infinite
+                  tap_action:
+                    action: toggle
+              kara:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.kara
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:account-music-outline'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Lime
+                      icon: 'mdi:account-music-outline'
+                  tap_action:
+                    action: toggle
+          - type: 'custom:button-card'
+            style:
+              top: 70%
+              left: 7%
+            styles:
+              custom_fields:
+                graph:
+                  - position: absolute
+                  - left: 0px
+                  - top: 25px
+                topleft:
+                  - position: absolute
+                  - left: 40%
+                  - top: 7px
+                topright:
+                  - position: absolute
+                  - right: 20px
+                  - top: 10px
+                centertop:
+                  - position: absolute
+                  - left: 90px
+                  - top: 12px
+                fan:
+                  - position: absolute
+                  - left: 85px
+                  - top: 54px
+                san:
+                  - position: absolute
+                  - left: 40px
+                  - top: 50px
+                bep:
+                  - position: absolute
+                  - right: 20px
+                  - top: 53px
+              grid:
+                - grid-template-areas: '"i" "n" "l"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
+              card:
+                - border-radius: 10px
+                - box-shadow: '5px 5px 20px rgba(0, 0, 0, 0.2)'
+                - min-height: 120px
+                - min-width: 200px
+              name:
+                - color: var(--secondary-text-color)
+                - justify-self: center
+              label:
+                - font-size: 12px
+                - justify-self: center
+                - padding-bottom: 70px
+            custom_fields:
+              graph:
+                card:
+                  type: 'custom:mini-graph-card'
+                  card_mod:
+                    style: |
+                      ha-card {
+                      --ha-card-background: transparent; 
+                      color: var(--secondary-text-color);
+                      width: 200px;
+                      border-radius: 0px;
+                      }
+                  entities:
+                    - entity: sensor.temp_kitchen_ambient
+                  show:
+                    icon: false
+                    name: false
+                    points: true
+                  font_size: 60
+                  line_color: blue
+              topleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_kitchen
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:food-variant-off'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: red
+                      icon: 'mdi:food-variant'
+                  tap_action:
+                    action: toggle
+              fan:
+                card:
+                  type: 'custom:button-card'
+                  entity: fan.fan_kitchen
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:fan'
+                  styles:
+                    icon:
+                      - width: 25px
+                  state:
+                    - value: 'on'
+                      color: green
+                      styles:
+                        icon:
+                          - animation:
+                              - rotating 3s linear infinite
+                  tap_action:
+                    action: toggle
+              topright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.light_kitchen
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:lightbulb'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:lightbulb-on'
+                  tap_action:
+                    action: toggle
+              bep:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.bep
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:fireplace-off'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:fireplace'
+                  tap_action:
+                    action: toggle
+          - type: 'custom:button-card'
+            style:
+              top: 85%
+              left: 15%
+            styles:
+              custom_fields:
+                topleft:
+                  - position: absolute
+                  - left: 10%
+                  - top: 7px
+                topright:
+                  - position: absolute
+                  - right: 10px
+                  - top: 10px
+                centertop:
+                  - position: absolute
+                  - left: 61px
+                  - top: 5px
+                music:
+                  - position: absolute
+                  - left: 45px
+                  - top: 54px
+                fire:
+                  - position: absolute
+                  - left: 90px
+                  - top: 54px
+              grid:
+                - grid-template-areas: '"i" "n" "l"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
+              card:
+                - border-radius: 10px
+                - box-shadow: '5px 5px 20px rgba(0, 0, 0, 0.2)'
+                - min-height: 100px
+                - min-width: 150px
+              name:
+                - color: var(--secondary-text-color)
+                - justify-self: center
+              label:
+                - font-size: 12px
+                - justify-self: center
+                - padding-bottom: 70px
+            custom_fields:
+              topleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_phongtho
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:church'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:church'
+                  tap_action:
+                    action: toggle
+              topright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.den_tho
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:lightbulb'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:lightbulb-on'
+                  tap_action:
+                    action: toggle
+              centertop:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.den_tho_3v
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:led-off'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: red
+                      icon: 'mdi:led-on'
+                  tap_action:
+                    action: toggle
+              music:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.tung_kinh
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:music-note-off'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: green
+                      icon: 'mdi:music-circle-outline'
+                  tap_action:
+                    action: toggle
+              fire:
+                card:
+                  type: 'custom:button-card'
+                  entity: binary_sensor.huong
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:fire'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:fire'
+                  tap_action:
+                    action: toggle
+          - type: 'custom:button-card'
+            show_icon: true
+            entity_picture: /local/image/icon/stopwatch.png
+            show_entity_picture: true
+            entity: input_number.light_timer_minutes
+            name: Zu Hause
+            show_name: false
+            show_label: false
+            style:
+              top: 25%
+              left: 65%
+            styles:
+              custom_fields:
+                topleft:
+                  - position: absolute
+                  - left: 10%
+                  - top: 7px
+                topright:
+                  - position: absolute
+                  - right: 10px
+                  - top: 10px
+                centertop:
+                  - position: absolute
+                  - left: 61px
+                  - top: 5px
+              grid:
+                - grid-template-areas: '"i" "n" "l"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
+              card:
+                - border-radius: 10px
+                - box-shadow: '5px 5px 20px rgba(0, 0, 0, 0.2)'
+                - min-height: 100px
+                - min-width: 150px
+              icon:
+                - width: 40px
+              img_cell:
+                - padding-top: 30px
+              name:
+                - color: var(--secondary-text-color)
+                - justify-self: center
+              label:
+                - font-size: 12px
+                - justify-self: center
+                - padding-bottom: 70px
+            custom_fields:
+              topleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_toilet
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:shower-head'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:shower-head'
+                  tap_action:
+                    action: toggle
+              topright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.tolet
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:lightbulb'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:lightbulb-on'
+                  tap_action:
+                    action: toggle
+              centertop:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.may_nong_lanh
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:water-percent'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:water-percent'
+                  tap_action:
+                    action: toggle
+          - type: 'custom:button-card'
+            style:
+              top: 25%
+              left: 80%
+            styles:
+              custom_fields:
+                graph:
+                  - position: absolute
+                  - left: 0px
+                  - top: 25px
+                topleft:
+                  - position: absolute
+                  - left: 40%
+                  - top: 7px
+                topright:
+                  - position: absolute
+                  - right: 15px
+                  - top: 10px
+                fan:
+                  - position: absolute
+                  - right: 55px
+                  - top: 35px
+                center:
+                  - position: absolute
+                  - left: 95px
+                  - top: 65px
+                sleep:
+                  - position: absolute
+                  - right: 15px
+                  - top: 60px
+              grid:
+                - grid-template-areas: '"i" "n" "l"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
+              card:
+                - border-radius: 10px
+                - box-shadow: '5px 5px 20px rgba(0, 0, 0, 0.2)'
+                - min-height: 120px
+                - min-width: 220px
+              name:
+                - color: var(--secondary-text-color)
+                - justify-self: center
+              label:
+                - font-size: 12px
+                - justify-self: center
+                - padding-bottom: 70px
+            custom_fields:
+              graph:
+                card:
+                  type: 'custom:mini-graph-card'
+                  card_mod:
+                    style: |
+                      ha-card {
+                      --ha-card-background: transparent; 
+                      color: var(--secondary-text-color);
+                      width: 220px;
+                      border-radius: 0px;
+                      }
+                  entities:
+                    - entity: sensor.nha_realfeel_temperature
+                  show:
+                    icon: false
+                    name: false
+                    points: true
+                  font_size: 60
+                  line_color: blue
+              topleft:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.off_all_bedroom
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:human-male-female'
+                  styles:
+                    icon:
+                      - width: 35px
+                  state:
+                    - value: 'on'
+                      color: red
+                      icon: 'mdi:human-male-female'
+                  tap_action:
+                    action: toggle
+              fan:
+                card:
+                  type: 'custom:button-card'
+                  entity: fan.fan_bedroom
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:fan'
+                  styles:
+                    icon:
+                      - width: 25px
+                  state:
+                    - value: 'on'
+                      color: green
+                      styles:
+                        icon:
+                          - animation:
+                              - rotating 3s linear infinite
+                  tap_action:
+                    action: toggle
+              topright:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.light_bedroom
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:lightbulb'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: Yellow
+                      icon: 'mdi:lightbulb-on'
+                  tap_action:
+                    action: toggle
+              sleep:
+                card:
+                  type: 'custom:button-card'
+                  entity: light.light_bedroom_sleep
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:bed-empty'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:bed'
+                  tap_action:
+                    action: toggle
+              center:
+                card:
+                  type: 'custom:button-card'
+                  entity: switch.window_curtains_open
+                  show_state: false
+                  show_name: false
+                  icon: 'mdi:blinds-open'
+                  styles:
+                    icon:
+                      - width: 30px
+                  state:
+                    - value: 'on'
+                      color: 'rgb(234, 179, 0)'
+                      icon: 'mdi:blinds'
+                  tap_action:
+                    action: toggle
+  - title: TV LG Admin
+    path: ''
+    icon: 'mdi:remote-tv'
+    visible:
+      - user: 7865da585727423c903ec96aa75f9fed
+    badges: []
+    cards:
+      - type: media-control
+        entity: media_player.lg_webos_smart_tv
+      - type: 'custom:lg-remote-control'
+        entity: media_player.lg_webos_smart_tv
+        dimensions:
+          scale: 0.8
+          border_width: 5px
+        colors:
+          buttons: var(--deactive-background-button-color)
+          texts: pink
+          background: 'rgb(94,15,234)'
+          Border: 'rgb((255,112,243)'
+        sources:
+          - name: Netflix
+            icon: 'mdi:netflix'
+          - name: Disney
+            icon: disney
+          - name: Chương trình phát
+            icon: dazn
+          - name: YouTube
+            icon: 'mdi:youtube-tv'
+      - type: media-control
+        entity: media_player.living_room_tv
+      - type: 'custom:lg-remote-control'
+        entity: media_player.living_room_tv
+        dimensions:
+          scale: 0.8
+          border_width: 5px
+        colors:
+          buttons: var(--deactive-background-button-color)
+          texts: pink
+          background: 'rgb(94,15,24)'
+          Border: 'rgb((255,112,243)'
+        sources:
+          - name: Netflix
+            icon: 'mdi:netflix'
+          - name: Disney
+            icon: disney
+          - name: Chương trình phát
+            icon: dazn
+          - name: YouTube
+            icon: 'mdi:youtube-tv'
+  - panel: false
+    icon: 'mdi:chart-bar'
+    title: Chart
+    badges: []
+    cards: []
+title: 'Smart Home '

@@ -1,0 +1,350 @@
+- id: '1622973371464'
+  name: Alarm Night On
+  entities:
+    light.light_living:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Light_Living
+      supported_features: 0
+      state: 'on'
+    light.light_bedroom:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Light_BedRoom
+      supported_features: 0
+      state: 'on'
+  icon: mdi:weather-night
+- id: '1622996454635'
+  name: Alarm Night Off
+  entities:
+    light.light_bedroom:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_BedRoom
+      supported_features: 0
+      state: 'off'
+    light.light_living:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_Living
+      supported_features: 0
+      state: 'off'
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'off'
+  icon: mdi:weather-night
+- id: '1623067113667'
+  name: 'OFF ALL '
+  entities:
+    fan.fan_bedroom:
+      friendly_name: Fan_BedRoom
+      supported_features: 0
+      state: 'off'
+    fan.fan_livng:
+      friendly_name: Fan_Livng
+      supported_features: 0
+      state: 'off'
+    light.light_bedroom:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_BedRoom
+      supported_features: 0
+      state: 'off'
+    light.light_living:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_Living
+      supported_features: 0
+      state: 'off'
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'off'
+  icon: mdi:home-flood
+- id: '1623076713242'
+  name: OFF BedRoom không kéo rèm
+  entities:
+    fan.fan_bedroom:
+      friendly_name: Fan_BedRoom
+      supported_features: 0
+      state: 'off'
+    light.light_bedroom:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_BedRoom
+      supported_features: 0
+      state: 'off'
+    light.light_bedroom_sleep:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_BedRoom_Sleep
+      supported_features: 0
+      state: 'off'
+    switch.window_curtains_open:
+      friendly_name: Window Curtains Open
+      state: 'off'
+  icon: mdi:human-male-female
+- id: '1623076954137'
+  name: OFF ALL LIVING
+  entities:
+    light.light_living:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_Living
+      supported_features: 0
+      state: 'off'
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'off'
+    fan.fan_livng:
+      friendly_name: Fan_Livng
+      supported_features: 0
+      state: 'off'
+  icon: mdi:human-capacity-decrease
+- id: '1624420892163'
+  name: On Light ReedBook
+  entities:
+    light.normal:
+      supported_color_modes:
+      - onoff
+      friendly_name: Normal
+      supported_features: 0
+      state: 'off'
+    light.kara:
+      supported_color_modes:
+      - onoff
+      friendly_name: Kara
+      supported_features: 0
+      state: 'off'
+    light.red:
+      supported_color_modes:
+      - onoff
+      friendly_name: Red
+      supported_features: 0
+      state: 'off'
+    light.sleep:
+      supported_color_modes:
+      - onoff
+      friendly_name: Sleep
+      supported_features: 0
+      state: 'off'
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'on'
+  icon: mdi:book-open-page-variant
+- id: '1624421254889'
+  name: On Light Chill
+  entities:
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'on'
+    light.reed_book:
+      supported_color_modes:
+      - onoff
+      friendly_name: Reed Book
+      supported_features: 0
+      state: 'off'
+    light.kara:
+      supported_color_modes:
+      - onoff
+      friendly_name: Kara
+      supported_features: 0
+      state: 'off'
+    light.sleep:
+      supported_color_modes:
+      - onoff
+      friendly_name: Sleep
+      supported_features: 0
+      state: 'off'
+    light.red:
+      supported_color_modes:
+      - onoff
+      friendly_name: Red
+      supported_features: 0
+      state: 'off'
+  icon: mdi:led-strip-variant
+- id: '1624421509495'
+  name: On Light Kara
+  entities:
+    light.reed_book:
+      supported_color_modes:
+      - onoff
+      friendly_name: Reed Book
+      supported_features: 0
+      state: 'off'
+    light.normal:
+      supported_color_modes:
+      - onoff
+      friendly_name: Normal
+      supported_features: 0
+      state: 'off'
+    light.sleep:
+      supported_color_modes:
+      - onoff
+      friendly_name: Sleep
+      supported_features: 0
+      state: 'off'
+    light.red:
+      supported_color_modes:
+      - onoff
+      friendly_name: Red
+      supported_features: 0
+      state: 'off'
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'on'
+  icon: mdi:account-music-outline
+- id: '1624421647997'
+  name: On Light Sleep RGB
+  entities:
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'on'
+    light.reed_book:
+      supported_color_modes:
+      - onoff
+      friendly_name: Reed Book
+      supported_features: 0
+      state: 'off'
+    light.kara:
+      supported_color_modes:
+      - onoff
+      friendly_name: Kara
+      supported_features: 0
+      state: 'off'
+    light.normal:
+      supported_color_modes:
+      - onoff
+      friendly_name: Normal
+      supported_features: 0
+      state: 'off'
+    light.red:
+      supported_color_modes:
+      - onoff
+      friendly_name: Red
+      supported_features: 0
+      state: 'off'
+  icon: mdi:seat-individual-suite
+- id: '1624421786274'
+  name: On Light Red
+  entities:
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'on'
+    light.reed_book:
+      supported_color_modes:
+      - onoff
+      friendly_name: Reed Book
+      supported_features: 0
+      state: 'off'
+    light.kara:
+      supported_color_modes:
+      - onoff
+      friendly_name: Kara
+      supported_features: 0
+      state: 'off'
+    light.normal:
+      supported_color_modes:
+      - onoff
+      friendly_name: Normal
+      supported_features: 0
+      state: 'off'
+    light.sleep:
+      supported_color_modes:
+      - onoff
+      friendly_name: Sleep
+      supported_features: 0
+      state: 'off'
+  icon: mdi:clover
+- id: '1624421912466'
+  name: OFF ALL RGB
+  entities:
+    light.kara:
+      supported_color_modes:
+      - onoff
+      friendly_name: Kara
+      supported_features: 0
+      state: 'off'
+    light.normal:
+      supported_color_modes:
+      - onoff
+      friendly_name: Normal
+      supported_features: 0
+      state: 'off'
+    light.sleep:
+      supported_color_modes:
+      - onoff
+      friendly_name: Sleep
+      supported_features: 0
+      state: 'off'
+    light.red:
+      supported_color_modes:
+      - onoff
+      friendly_name: Red
+      supported_features: 0
+      state: 'off'
+    light.reed_book:
+      supported_color_modes:
+      - onoff
+      friendly_name: Reed Book
+      supported_features: 0
+      state: 'off'
+    light.off_rgb:
+      supported_color_modes:
+      - onoff
+      friendly_name: Off_rgb
+      supported_features: 0
+      state: 'off'
+  icon: mdi:flash-off
+- id: '1644809210378'
+  name: OFF BedRoom kéo rèm
+  entities:
+    fan.fan_bedroom:
+      friendly_name: Fan_BedRoom
+      supported_features: 0
+      state: 'off'
+    light.light_bedroom:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_BedRoom
+      supported_features: 0
+      state: 'off'
+    light.light_bedroom_sleep:
+      supported_color_modes:
+      - onoff
+      friendly_name: Light_BedRoom_Sleep
+      supported_features: 0
+      state: 'off'
+    switch.window_curtains_open:
+      friendly_name: Window Curtains Open
+      state: 'on'

@@ -1,0 +1,725 @@
+- id '1622971071535'
+  alias Alarm
+  description ''
+  trigger
+  - platform state
+    entity_id binary_sensor.open_door
+    from 'off'
+    to 'on'
+  condition
+  - condition state
+    entity_id alarm_control_panel.home_alarm
+    state armed_away
+  action
+  - service notify.mobile_app_cafe_hoang_anh
+    data
+      message Có người mở cửa !!!!
+  - service scene.turn_on
+    target
+      entity_id scene.new_scene
+  - service media_player.play_media
+    data
+      media_content_id localmp3Alarmalarm1.mp3
+      media_content_type music
+    target
+      entity_id media_player.cd21c924_155381ae
+  mode single
+- id '1622993576920'
+  alias Stop Alarm
+  description ''
+  trigger
+  - platform state
+    entity_id alarm_control_panel.home_alarm
+    from armed_away
+    to disarmed
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.alarm_night_off
+  - service media_player.media_stop
+    target
+      entity_id media_player.cd21c924_155381ae
+  mode single
+- id '1623067307810'
+  alias OFF ALL
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service script.turn_on
+    target
+      entity_id script.off_all
+  mode single
+- id '1623067899054'
+  alias OFF Alll
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service script.turn_on
+    target
+      entity_id script.off_all
+  mode single
+- id '1623073870537'
+  alias OFF ALL HOME
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service light.turn_off
+    target
+      entity_id
+      - light.off_all_living
+      - light.off_all_bedroom
+      - light.off_all_phongtho
+      - light.off_all_toilet
+      - light.off_all_kitchen
+  - service switch.turn_on
+    target
+      entity_id switch.window_curtains_open
+  mode single
+- id '1623077035015'
+  alias OFF ALL LIVING
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all_living
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.off_living
+  mode single
+- id '1623077651037'
+  alias ON ALL LIVING
+  description Khi bật 1 hoặc 2 thiết bị thì off living đổi màu có người
+  trigger
+  - platform state
+    entity_id fan.fan_livng
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.light_living
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.off_rgb
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service light.turn_on
+    target
+      entity_id light.off_all_living
+  mode single
+- id '1623143178817'
+  alias Nhiệt độ cao nấu ăn
+  description ''
+  trigger
+  - platform numeric_state
+    entity_id sensor.temp_kitchen_object
+    above '95'
+    below '200'
+  condition []
+  action
+  - service media_player.play_media
+    data
+      media_content_id localmp3BepNauAn.mp3
+      media_content_type music
+    target
+      entity_id media_player.cd21c924_155381ae
+  - service notify.mobile_app_cafe_hoang_anh
+    data
+      message Bạn đang nấu ăn, nhiệt độ đang tăng cao !!!
+  mode single
+- id '1623560295601'
+  alias On Light Sleep RGB
+  description ''
+  trigger
+  - platform state
+    entity_id light.sleep
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.on_light_sleep
+  - service media_player.media_stop
+    target
+      entity_id media_player.cd21c924_155381ae
+  mode single
+- id '1623657147775'
+  alias Open Door when enter code
+  description ''
+  trigger
+  - platform state
+    entity_id alarm_control_panel.home_alarm
+    to disarmed
+    from armed_away
+  condition
+  - condition state
+    entity_id switch.servo_door
+    state 'off'
+  action
+  - service switch.turn_on
+    target
+      entity_id switch.servo_door
+  mode single
+- id '1624159348478'
+  alias Auto Keo Rem
+  description ''
+  trigger
+  - platform sun
+    event sunrise
+  condition
+  - condition numeric_state
+    entity_id sensor.nha_uv_index
+    above '2'
+    below '50'
+  action
+  - service switch.turn_on
+    target
+      entity_id switch.window_curtains_open
+  mode single
+- id '1624159432660'
+  alias Auto Dong Rem
+  description ''
+  trigger
+  - platform sun
+    event sunset
+  condition
+  - condition numeric_state
+    entity_id sensor.nha_uv_index
+    above '2'
+    below '0'
+  action
+  - service switch.turn_off
+    target
+      entity_id switch.window_curtains_open
+  mode single
+- id '1624421012451'
+  alias On Light and Music ReedBook RGB
+  description ''
+  trigger
+  - platform state
+    entity_id light.reed_book
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.on_light_reedbook
+  - service media_player.play_media
+    target
+      entity_id
+      - media_player.cd21c924_155381ae
+      - media_player.cd21c924_155381ae
+      - media_player.cd21c924_155381ae
+      - media_player.26a56145_9ede0a91
+    data
+      media_content_id localmp3MusicReedBook.mp3
+      media_content_type Music
+  mode single
+- id '1624421374209'
+  alias On Light Chill and Music RGB
+  description ''
+  trigger
+  - platform state
+    entity_id light.normal
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.on_light_chill
+  - service media_player.play_media
+    target
+      entity_id
+      - media_player.cd21c924_155381ae
+      - media_player.26a56145_9ede0a91
+    data
+      media_content_id localmp3Musicchill.mp3
+      media_content_type music
+  mode single
+- id '1624421586130'
+  alias On Light Kara RGB
+  description ''
+  trigger
+  - platform state
+    entity_id light.kara
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.on_light_kara
+  - service media_player.media_stop
+    target
+      entity_id
+      - media_player.cd21c924_155381ae
+      - media_player.26a56145_9ede0a91
+  mode single
+- id '1624421844178'
+  alias On Light Love and Music RGB
+  description ''
+  trigger
+  - platform state
+    entity_id light.red
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.on_light_red
+  - service media_player.play_media
+    target
+      entity_id
+      - media_player.cd21c924_155381ae
+      - media_player.26a56145_9ede0a91
+    data
+      media_content_id localmp3Musiclove.mp3
+      media_content_type Music
+  mode single
+- id '1624421991867'
+  alias OFF ALL RGB and Music
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_rgb
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.on_off_rgb
+  - service media_player.media_stop
+    target
+      entity_id
+      - media_player.cd21c924_155381ae
+      - media_player.cd21c924_155381ae
+      - media_player.cd21c924_155381ae
+      - media_player.26a56145_9ede0a91
+  mode single
+- id '1634220295425'
+  alias New Automation
+  description ''
+  trigger
+  - platform event
+    event_type mobile_app_notification_action
+    event_data
+      action ALARM
+    context
+      user_id
+      - 7865da585727423c903ec96aa75f9fed
+  condition []
+  action
+  - service notify.mobile_app_iphonev
+    data
+      message 'Ok Ok Ok '
+  mode single
+- id '1634221918225'
+  alias Motion Detected Camera Send Telegram
+  trigger
+  - platform state
+    entity_id switch.servo_door
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service camera.snapshot
+    target
+      entity_id camera.camera1
+    data
+      filename configwwwsnapshootsliving-room_motion-detected.png
+  - delay
+      hours 0
+      minutes 0
+      seconds 0
+      milliseconds 0
+  - service notify.mobile_app_cafe_hoang_anh
+    data
+      message Motion detected in the living room.
+      data
+        attachment
+          url localsnapshootsliving-room_motion-detected.png
+          content-type png
+          hide-thumbnail true
+  - service telegram_bot.send_photo
+    data
+      file configwwwsnapshootsliving-room_motion-detected.png
+      caption Motion detected in the living room.
+  mode single
+- id '1635396533690'
+  alias Máy nước nóng
+  description ''
+  trigger
+  - platform state
+    entity_id light.may_nong_lanh
+    to 'on'
+  condition []
+  action
+  - delay
+      minutes '{{ states(''input_number.light_timer_minutes'')  int }}'
+  - service light.turn_off
+    data {}
+    target
+      entity_id light.may_nong_lanh
+  mode single
+- id '1637762495887'
+  alias OFF ALL TOILET
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all_toilet
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service light.turn_off
+    target
+      entity_id
+      - light.may_nong_lanh
+      - light.tolet
+  mode single
+- id '1637762875471'
+  alias ON ALL HOME
+  description Khi 1 thiết bị được bật thì sẽ báo hiệu trạng thái về nhà
+  trigger
+  - platform state
+    entity_id light.off_all_living
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.off_all_bedroom
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.off_all_phongtho
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.off_all_kitchen
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.off_all_toilet
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service light.turn_on
+    target
+      entity_id light.off_all
+  mode single
+- id '1637763819689'
+  alias OFF ALL PHÒNG THỜ
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all_phongtho
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service light.turn_off
+    target
+      entity_id
+      - light.den_tho
+      - light.den_tho_3v
+      - light.tung_kinh
+  mode single
+- id '1637764041929'
+  alias ON ALL PHÒNG THỜ
+  description ''
+  trigger
+  - platform state
+    entity_id light.den_tho
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.den_tho_3v
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.tung_kinh
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service light.turn_on
+    target
+      entity_id light.off_all_phongtho
+  mode single
+- id '1637765447047'
+  alias OFF ALL KITCHEN
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all_kitchen
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service light.turn_off
+    target
+      entity_id
+      - light.bep
+      - light.light_kitchen
+  - service fan.turn_off
+    target
+      entity_id fan.fan_kitchen
+  mode single
+- id '1637765561229'
+  alias ON ALL KITCHEN
+  description ''
+  trigger
+  - platform state
+    entity_id light.light_kitchen
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id fan.fan_kitchen
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.bep
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service light.turn_on
+    target
+      entity_id light.off_all_kitchen
+  mode single
+- id '1637767312020'
+  alias ON ALL TOILET
+  description ''
+  trigger
+  - platform state
+    entity_id light.may_nong_lanh
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.tolet
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service light.turn_on
+    target
+      entity_id light.off_all_toilet
+  mode single
+- id '1637842856257'
+  alias Tự bật nước nóng khi gần về nhà
+  description ''
+  trigger
+  - platform zone
+    entity_id device_tracker.van_viet
+    zone zone.home_2
+    event enter
+  condition
+  - condition numeric_state
+    entity_id sensor.nha_realfeel_temperature
+    above '0'
+    below '25'
+  action
+  - service light.turn_on
+    target
+      entity_id light.may_nong_lanh
+  - service notify.mobile_app_cafe_hoang_anh
+    data
+      message 'Nước nóng đã được bật '
+  mode single
+- id '1638110652908'
+  alias Kinh Phật ON
+  description ''
+  trigger
+  - platform state
+    entity_id light.tung_kinh
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service media_player.play_media
+    target
+      entity_id
+      - media_player.cd21c924_155381ae
+      - media_player.26a56145_9ede0a91
+    data
+      media_content_id localmp3MusickinhPhat.mp3
+      media_content_type music
+  mode single
+- id '1638110812277'
+  alias Kinh Phật OFF
+  description ''
+  trigger
+  - platform state
+    entity_id light.tung_kinh
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service media_player.media_stop
+    target
+      entity_id
+      - media_player.cd21c924_155381ae
+      - media_player.26a56145_9ede0a91
+  mode single
+- id '1644770259402'
+  alias Báo Động
+  description ''
+  trigger
+  - platform state
+    entity_id light.khan_cap
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service media_player.play_media
+    target
+      entity_id media_player.26a56145_9ede0a91
+    data
+      media_content_id localmp3AlarmBaoDong.mp3
+      media_content_type music
+  mode single
+- id '1644770376004'
+  alias Tắt Báo Động
+  description ''
+  trigger
+  - platform state
+    entity_id light.khan_cap
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service media_player.media_stop
+    target
+      entity_id media_player.26a56145_9ede0a91
+  mode single
+- id '1644809320428'
+  alias OFF BedRoom Kéo Rèm
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all_bedroom
+    from 'on'
+    to 'off'
+  condition
+  - condition state
+    entity_id automation.off_bedroom_khong_keo_rem
+    state 'off'
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.off_bedroom_keo_rem
+  mode single
+- id '1644809486438'
+  alias OFF BedRoom không kéo rèm
+  description ''
+  trigger
+  - platform state
+    entity_id light.off_all_bedroom
+    from 'on'
+    to 'off'
+  condition
+  - condition state
+    entity_id automation.off_bedroom_keo_rem
+    state 'off'
+  action
+  - service scene.turn_on
+    target
+      entity_id scene.off_bedroom
+  mode single
+- id '1644809764096'
+  alias Thay đổi trạng thái BedRoom
+  description 1 trong những thiết bị như - ĐÈN _ QUẠT _ ĐÈN NGỦ bật thì sẽ thay đổi
+    trạng thái
+  trigger
+  - platform state
+    entity_id fan.fan_bedroom
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.light_bedroom
+    from 'off'
+    to 'on'
+  - platform state
+    entity_id light.light_bedroom_sleep
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service light.turn_on
+    target
+      entity_id light.off_all_bedroom
+  mode single
+- id '1644810373432'
+  alias Tự động bật đèn ngủ khi trời tối
+  description ''
+  trigger
+  - platform state
+    entity_id light.light_bedroom
+    from 'on'
+    to 'off'
+  condition
+  - condition time
+    after '210000'
+    before '60000'
+  action
+  - service light.turn_on
+    target
+      entity_id light.light_bedroom_sleep
+  mode single
+- id '1645641540391'
+  alias Khói Hương Bật Nhạc + Đèn
+  description ''
+  trigger
+  - platform state
+    entity_id binary_sensor.huong
+    from 'off'
+    to 'on'
+  condition []
+  action
+  - service light.turn_on
+    target
+      entity_id
+      - light.tung_kinh
+      - light.den_tho_3v
+  mode single
+- id '1645641757696'
+  alias Khói Hương Tắt Nhạc + Đèn
+  description ''
+  trigger
+  - platform state
+    entity_id binary_sensor.huong
+    from 'on'
+    to 'off'
+  condition []
+  action
+  - service light.turn_off
+    target
+      entity_id
+      - light.tung_kinh
+      - light.den_tho_3v
+  mode single

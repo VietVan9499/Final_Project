@@ -1,0 +1,594 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+#http:
+  #base_url: vietnguyen.duckdns.org
+  #server_port: 8123
+  #ssl_certificate: /ssl/fullchain.pem
+  #ssl_key: /ssl/privkey.pem
+
+
+spotify:
+  client_id:  62d714c32f3a4c7195c850fcdb0a832b
+  client_secret:  3d238497a63a48d0b2e0fcb969219cd1
+
+stream:
+camera:
+  - platform: ffmpeg
+    name: Camera1
+    input: "rtsp://admin:Vietnguyen123_@192.168.0.4:554/onvif1"
+  - platform: ffmpeg
+    name: Camera2
+    input: "rtsp://admin:Vietnguyen123_@192.168.0.13:554/onvif1"
+image_processing:
+  - platform: deepstack_object
+    ip_address: 10.0.2.15
+    port: 80
+    api_key: vietnguyen
+    # custom_model: mask
+    confidence: 10
+    #save_file_folder: /config/snapshots/
+    #save_file_format: png
+    #save_timestamped_file: True
+    #always_save_latest_file: True
+    #    targets:
+    #      - target: person
+    #      - target: vehicle
+    #        confidence: 60
+    #      - target: car
+    #        confidence: 40
+    source:
+      - entity_id: camera.camera1
+switch:
+  ####################################################################################
+  #                                                                                  #
+  #                            LIVING  SERVO                                         #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    name: "Servo_Door"
+    command_topic: "DoAn/LivingRoom/Servo"
+    state_topic: "DoAn/LivingRoom/Servo"
+    payload_on: "OPEN"
+    payload_off: "CLOSE"
+    retain: true
+  ####################################################################################
+  #                                                                                  #
+  #                                  BAR                                             #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    name: "Side Bar"
+    command_topic: "DoAn/SideBar"
+    state_topic: "DoAn/SideBar"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "Header Bar"
+    command_topic: "DoAn/Header"
+    state_topic: "DoAn/Header"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "Kiosk"
+    command_topic: "DoAn/Kiosk"
+    state_topic: "DoAn/Kiosk"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  ####################################################################################
+  #                                                                                  #
+  #                                  BEDROOM                                         #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    name: "Window Curtains Open"
+    command_topic: "DoAn/BedRoom/Curtains"
+    state_topic: "DoAn/BedRoom/Curtains"
+    payload_on: "Open"
+    payload_off: "Close"
+    retain: true
+
+light:
+  ####################################################################################
+  #                                                                                  #
+  #                                  LIVING                                          #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    name: "Light_Living"
+    command_topic: "DoAn/LivingRoom/Light"
+    state_topic: "DoAn/LivingRoom/Light"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+    retain: true
+
+  - platform: mqtt
+    name: "Light_San"
+    command_topic: "DoAn/LivingRoom/LightSan"
+    state_topic: "DoAn/LivingRoom/LightSan"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+    retain: true
+
+  ####################################################################################
+  #                                                                                  #
+  #                                  BEDROOM                                         #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    name: "Light_BedRoom"
+    command_topic: "DoAn/BedRoom/Light"
+    state_topic: "DoAn/BedRoom/Light"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "Light_BedRoom_Sleep"
+    command_topic: "DoAn/BedRoom/Sleep"
+    state_topic: "DoAn/BedRoom/Sleep"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  ####################################################################################
+  #                                                                                  #
+  #                                     RGB                                          #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    name: Reed Book
+    state_topic: LEDS/Reed_Book
+    command_topic: LEDS/Reed_Book
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  #############################################################
+  - platform: mqtt
+    name: Kara
+    state_topic: LEDS/Kara
+    command_topic: LEDS/Kara
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  #############################################################
+  - platform: mqtt
+    name: Off_rgb
+    state_topic: LEDS/OFF
+    command_topic: LEDS/OFF
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  #############################################################
+  - platform: mqtt
+    name: Normal
+    state_topic: LEDS/Normal
+    command_topic: LEDS/Normal
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  #############################################################
+  - platform: mqtt
+    name: Sleep
+    state_topic: LEDS/Sleep
+    command_topic: LEDS/Sleep
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  #############################################################
+  - platform: mqtt
+    name: Red
+    state_topic: LEDS/Red
+    command_topic: LEDS/Red
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  #############################################################  OFF ALL
+  - platform: mqtt
+    name: OFF ALL
+    state_topic: OFF/ALL
+    command_topic: OFF/ALL
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: OFF ALL BEDROOM
+    state_topic: OFF/ALL/BedRoom
+    command_topic: OFF/ALL/BedRoom
+    payload_on: "ON_ALL_Br"
+    payload_off: "OFF_ALL_Br"
+    retain: true
+
+  - platform: mqtt
+    name: OFF ALL Living
+    state_topic: OFF/ALL/Living
+    command_topic: OFF/ALL/Living
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+#############################################################  OFF ALL
+  ####################################################################################
+  #                                                                                  #
+  #                                  THREE ROOM                                      #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    name: "Light_Kitchen"
+    command_topic: "DoAn/Three/LightChitKen"
+    state_topic: "DoAn/Three/LightChitKen"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "Den_Tho"
+    command_topic: "DoAn/Three/DenTho"
+    state_topic: "DoAn/Three/DenTho"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+    
+  - platform: mqtt
+    name: "Tolet"
+    command_topic: "DoAn/Three/LightTolet"
+    state_topic: "DoAn/Three/LightTolet"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "Den_Tho_3V"
+    command_topic: "DoAn/Three/LightDenTho3V"
+    state_topic: "DoAn/Three/LightDenTho3V"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "May_Nong_Lanh"
+    command_topic: "DoAn/Three/MayNongLanh"
+    state_topic: "DoAn/Three/MayNongLanh"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true   
+    
+  - platform: mqtt
+    name: "Khan_Cap"
+    command_topic: "DoAn/Three/KhanCap"
+    state_topic: "DoAn/Three/KhanCap"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true   
+
+  - platform: mqtt
+    name: "Bep"
+    command_topic: "DoAn/Three/Bep"
+    state_topic: "DoAn/Three/Bep"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true      
+    
+  - platform: mqtt
+    name: "Tung_Kinh"
+    command_topic: "DoAn/Three/TungKinh"
+    state_topic: "DoAn/Three/TungKinh"
+    payload_on: "ON"
+    payload_off: "OFF"        
+
+  - platform: mqtt
+    name: "OFF ALL TOILET"
+    command_topic: "DoAn/Three/Toilet"
+    state_topic: "DoAn/Three/Toilet"
+    payload_on: "ON"
+    payload_off: "OFF"  
+
+  - platform: mqtt
+    name: "OFF ALL KITCHEN"
+    command_topic: "DoAn/Three/Kitchen"
+    state_topic: "DoAn/Three/Kitchen"
+    payload_on: "ON"
+    payload_off: "OFF"  
+
+  - platform: mqtt
+    name: "OFF ALL phongtho"
+    command_topic: "DoAn/Three/PhongTho"
+    state_topic: "DoAn/Three/PhongTho"
+    payload_on: "ON"
+    payload_off: "OFF"  
+
+fan:
+  - platform: mqtt
+    name: "Fan_Livng"
+    command_topic: "DoAn/LivingRoom/Fan"
+    state_topic: "DoAn/LivingRoom/Fan"
+    payload_on: "ON"
+    payload_off: "OFF"
+    qos: 1
+    retain: true
+
+  - platform: mqtt
+    name: "Fan_BedRoom"
+    command_topic: "DoAn/BedRoom/Fan"
+    state_topic: "DoAn/BedRoom/Fan"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+  - platform: mqtt
+    name: "Fan_Kitchen"
+    command_topic: "DoAn/Three/FanChitKen"
+    state_topic: "DoAn/Three/FanChitKen"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+binary_sensor:
+  - platform: mqtt
+    name: "Open Door"
+    state_topic: "DoAn/LivingRoom/Door"
+    payload_on: "open"
+    payload_off: "close"
+
+  - platform: mqtt
+    name: "Nhan Dang"
+    state_topic: "DoAn/NhanDang/Door"
+    payload_on: "NguoiLa"
+    payload_off: "KhongCoNguoi"
+
+  - platform: mqtt
+    name: "Huong"
+    state_topic: "DoAn/Three/Huong"
+    payload_on: "on"
+    payload_off: "off"  
+
+  - platform: mqtt
+    name: "Food"
+    state_topic: "DoAn/Bep/Food"
+    payload_on: "on"
+    payload_off: "off"    
+
+  - platform: mqtt
+    name: "Sua"
+    state_topic: "DoAn/Bep/Sua"
+    payload_on: "on"
+    payload_off: "off"  
+    
+  - platform: mqtt
+    name: "Rau"
+    state_topic: "DoAn/Bep/Rau"
+    payload_on: "on"
+    payload_off: "off"  
+    
+  - platform: mqtt
+    name: "Max"
+    state_topic: "DoAn/Bep/Max"
+    payload_on: "on"
+    payload_off: "off"     
+
+sensor:
+  ####################################################################################
+  #                                                                                  #
+  #                                SENSOR  LIVING                                    #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    state_topic: "DoAn/LivingRoom/dht/humidityroom"
+    name: "Humunity"
+    icon: mdi:water-percent
+    qos: 0
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    state_topic: "DoAn/LivingRoom/dht/temproom"
+    name: "Temprature"
+    icon: mdi:coolant-temperature
+    qos: 0
+    unit_of_measurement: "°C"
+
+  - platform: mqtt
+    state_topic: "DoAn/LivingRoom/AQI"
+    name: "AQI"
+    icon: mdi:eye
+    qos: 0
+    unit_of_measurement: "AQI"
+
+  - platform: mqtt
+    state_topic: "DoAn/LivingRoom/PM"
+    name: "PM"
+    icon: mdi:jquery
+    qos: 0
+    unit_of_measurement: "ug/m3"
+  ####################################################################################
+  #                                                                                  #
+  #                                  THREE ROOM                                      #
+  #                                                                                  #
+  ####################################################################################
+  - platform: mqtt
+    state_topic: "DoAn/Home/Kwh"
+    name: "KWH"
+    icon: mdi:power-socket-eu
+    qos: 0
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "DoAn/Home/Current"
+    name: "Current"
+    icon: mdi:current-ac
+    qos: 0
+    unit_of_measurement: "A"   
+
+  - platform: mqtt
+    state_topic: "DoAn/KitchenRoom/TempAmbient"
+    name: "Temp_KitChen_Ambient"
+    icon: mdi:coolant-temperature
+    qos: 0
+    unit_of_measurement: "°C"   
+     
+  - platform: mqtt
+    state_topic: "DoAn/KitchenRoom/TempObject"
+    name: "Temp_KitChen_Object"
+    icon: mdi:coolant-temperature
+    qos: 0
+    unit_of_measurement: "°C"   
+
+
+  - platform: powercalc
+    entity_id: light.light_living
+    linear:
+      calibrate:
+        - 1 -> 0.3
+        - 10 -> 1.25
+        - 50 -> 3.50
+        - 100 -> 6.8
+        - 255 -> 15.3
+
+
+
+  ##### Date and Time
+  # Minimal configuration of the standard time and date sensor
+  - platform: time_date
+    display_options:
+      - "date_time_iso"
+      - "date_time"
+  # Build on the standard sensor to produce one that can be customized
+  - platform: template
+    sensors:
+      time_formatted:
+        friendly_name: "Date and time VIET"
+        value_template: "{{ now().strftime('%H') }}"
+        icon_template: mdi:calendar-clock
+  ##### Date and Time
+
+  ######## BEDROOM
+  - platform: mqtt
+    state_topic: "DoAn/BedRoom/dht/humidityroom"
+    name: "Humunity_BedRoom"
+    qos: 0
+    icon: mdi:water-percent
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    state_topic: "DoAn/BedRoom/dht/temproom"
+    name: "Temprature_BedRoom"
+    icon: mdi:coolant-temperature
+    qos: 0
+    unit_of_measurement: "°C"
+
+  - platform: mqtt
+    state_topic: "DoAn/BedRoom/PM"
+    name: "PM_BedRoom"
+    icon: mdi:jquery
+    qos: 0
+    unit_of_measurement: "Ppm"
+######## BEDROOMs
+
+
+
+mqtt:
+  broker: vietnguyen.duckdns.org
+  port: 8889
+  username: vietnguyen
+  password: vanviet
+
+tts:
+  - platform: google_translate
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+webostv:
+  - name: Living Room TV
+    host: 192.168.0.24
+  - name: Bedroom TV
+    host: 192.168.0.22
+
+alexa:
+  smart_home:
+
+browser_mod:
+media_source:
+alarm_control_panel:
+  - platform: manual
+    name: home_alarm
+    code: !secret alarm_code
+    arming_time: 1
+    delay_time: 1
+    trigger_time: 1
+
+homeassistant:
+  customize: !include customize.yaml
+  time_zone: Asia/Ho_Chi_Minh
+  allowlist_external_dirs: 
+    - /config/www/snapshoots
+frontend:
+  themes: !include_dir_merge_named themes
+
+telegram_bot:
+  - platform: polling
+    api_key: 2067889555:AAGp_rUxcIxlu44E3Tv084IlP-E5B3o5d6Y
+    allowed_chat_ids:
+      - 1176468264
+
+notify:
+  - platform: telegram
+    name: telegram
+    chat_id: 1176468264
+
+  - platform: file
+    name: "Temprature_BedRoom"
+    filename: /config/www/sensor/contacts.csv
+    timestamp: true  
+  ####################################################################################
+  #                                                                                  #
+  #                                TIMER                                             #
+  #                                                                                  #
+  ####################################################################################
+timer:
+  test:
+    duration: "00:00:30"   
+
+  ####################################################################################
+  #                                                                                  #
+  #                                INPUT TIMER                                       #
+  #                                                                                  #
+  ####################################################################################
+input_number:
+  light_timer_minutes:
+    name: "Light Timer" 
+    min: 0
+    max: 30
+    step: 1
+
+input_boolean:
+  light_timer_enabled:
+    name: "Light timer switch"
+    initial: off
+    icon: mdi:timelapse
+  ####################################################################################
+  #                                                                                  #
+  #                                INFLUX                                            #
+  #                                                                                  #
+  ####################################################################################
+##########
+# DO NOT RENAME THIS FILE TO CONFIGURATION.YAML! YOU WILL BREAK YOUR CONFIG IF YOU DO SO!
+# INSTEAD, COPY THIS CODE WITHIN YOUR OWN SECRETS.YAML          
+##########
+
+influxdb:
+  host: a0d7b954-influxdb
+  port: 8086
+  database: homeassistant
+  username: homeassistant
+  password: homeassistant
+  max_retries: 3
+  default_measurement: state
